@@ -3,6 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+::-webkit-scrollbar {
+  @apply w-1
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-blue-200
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400 transition-colors duration-300
+}
+
+html{
+  @apply scroll-smooth
+}
+
 body{
   @apply font-Inter
 }
@@ -12,5 +31,5 @@ body{
 }
 
 .btn-primary{
-  @apply text-white bg-blue-600 hover:bg-blue-800
+  @apply text-white bg-blue-600 hover:bg-blue-800 transition-colors duration-200
 }

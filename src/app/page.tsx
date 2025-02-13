@@ -2,7 +2,7 @@ import Header from "@/components/Header"
 
 const page = () => {
   return (
-    <div className="container my-7">
+    <div className="h-[200vh]">
       <Header />
     </div>
   )
