@@ -6,3 +6,11 @@
 body{
   @apply font-Inter
 }
+
+.btn{
+  @apply px-6 py-3 capitalize text-sm font-medium rounded-xl
+}
+
+.btn-primary{
+  @apply text-white bg-blue-600 hover:bg-blue-800
+}
