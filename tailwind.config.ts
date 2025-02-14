@@ -12,6 +12,10 @@ export default {
     },
     container:{
       center:true
+    },extend:{
+      container:{
+        center:true
+      }
     }
   },
   plugins: [],
