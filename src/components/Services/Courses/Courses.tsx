@@ -2,9 +2,41 @@
 import { FadeRight } from "@/utils/animations";
 import { motion } from "framer-motion";
 import CourseCard from "./CourseCard";
-import { courses } from "@/utils/data";
+// import { courses } from "@/utils/data";
+import designer from "/public/images/designer.jpg";
+import developer from "/public/images/developer.jpg";
+import marketing from "/public/images/marketing.jpg";
+import { CoursesType } from "@/types";
 const Courses = () => {
-
+    const courses: CoursesType[] = [
+        {
+          title: "UI/IX Complete Course: From Ziro to Hero",
+          price: 450,
+          category: "UX/UI Course",
+          textColor: "text-violet-900", // Tailwind text color class
+          bgColor: "bg-violet-100", // Tailwind background color class
+          image: designer,
+          delay: 0.2,
+        },
+        {
+          title: "Master web development from scratch",
+          price: 500,
+          category: "Web Developing",
+          textColor: "text-yellow-900",
+          bgColor: "bg-yellow-100",
+          image: developer,
+          delay: 0.3,
+        },
+        {
+          title: "Marketing Complete Course",
+          price: 500,
+          category: "Marketing",
+          textColor: "text-sky-900",
+          bgColor: "bg-sky-100",
+          image: marketing,
+          delay: 0.4,
+        },
+      ];
     return (
         <div className="lg:mt-32 mt-16 space-y-10 mx-5">
             <motion.h1
@@ -16,7 +48,7 @@ const Courses = () => {
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                 {/* Course Card */}
                 {
-                    courses.map((course,i) => (
+                    courses.map((course, i) => (
                         <CourseCard course={course} key={i} />
                     ))
                 }

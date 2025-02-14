@@ -1,7 +1,4 @@
-import { CoursesType, DataItem, NavigationType, ReviewType } from "@/types";
-import designer from "/public/images/designer.jpg";
-import developer from "/public/images/developer.jpg";
-import marketing from "/public/images/marketing.jpg";
+import {  DataItem, NavigationType, ReviewType } from "@/types";
 export const statisticsData: DataItem[] = [
   { name: "Total Courses", value: 250 },
   { name: "Total Instructor", value: 300 },
@@ -36,36 +33,6 @@ export const reviews: ReviewType[] = [
     name: "Charlie Davis",
     content: "Not what I expected. The content felt outdated.",
     rating: 2,
-  },
-];
-
-export const courses: CoursesType[] = [
-  {
-    title: "UI/IX Complete Course: From Ziro to Hero",
-    price: 450,
-    category: "UX/UI Course",
-    textColor: "text-violet-900", // Tailwind text color class
-    bgColor: "bg-violet-100", // Tailwind background color class
-    image: designer,
-    delay: 0.2,
-  },
-  {
-    title: "Master web development from scratch",
-    price: 500,
-    category: "Web Developing",
-    textColor: "text-yellow-900",
-    bgColor: "bg-yellow-100",
-    image: developer,
-    delay: 0.3,
-  },
-  {
-    title: "Marketing Complete Course",
-    price: 500,
-    category: "Marketing",
-    textColor: "text-sky-900",
-    bgColor: "bg-sky-100",
-    image: marketing,
-    delay: 0.4,
   },
 ];
 
