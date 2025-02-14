@@ -54,7 +54,9 @@ const Reviews = () => {
             <div className="py-20 bg-cover bg-[url(/images/reviewsBg.png)] bg-center bg-no-repeat space-y-9">
                 <motion.h1 variants={FadeUp(.1)}
                     initial="initial"
-                    whileInView="animate" className="text-blue-800 uppercase text-center text-3xl">testimonial</motion.h1>
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                     className="text-blue-800 uppercase text-center text-3xl">testimonial</motion.h1>
                 <div className="space-y-5 text-center flex flex-col items-center">
                     <motion.h1 variants={FadeUp(.2)}
                         initial="initial"
@@ -67,9 +69,9 @@ const Reviews = () => {
                         viewport={{ once: true }} className="lg:max-w-[30rem] max-w-[25rem] text-stone-400 lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur cum quasi assumenda, vel adipisci nobis expedita! Suscipit, ipsa odit.</motion.p>
                 </div>
                 <motion.div variants={FadeUp(.4)}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{ once: true }} className="reviews-container">
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }} className="reviews-container">
                     <div className={cn("transition-opacity duration-300",
                         fade ? 'opacity-100' : 'opacity-0')}>
                         <ReviewCard review={reviews[currentReviewIndex]} />
