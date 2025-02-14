@@ -58,7 +58,7 @@ const Navbar = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<Se
                     </Link>
                 ))}
                 <button className="btn btn-primary !text-sm text-nowrap lg:!text-base">
-                    Sign Up
+                    subscribe
                 </button>
             </nav>
         </div>

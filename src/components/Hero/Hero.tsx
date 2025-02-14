@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import hero from "/public/images/hero.png";
 import { FadeUp } from "@/utils/animations";
 import { motion } from "framer-motion";
-import Statistics from "./Header/statistics/Statistics";
+import Statistics from "./statistics/Statistics";
 const Hero = () => {
     return (
         <div

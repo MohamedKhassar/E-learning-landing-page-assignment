@@ -3,8 +3,10 @@ import ServicesHeader from "./ServicesHeader"
 
 const Services = () => {
   return (
-    <div className="container lg:mt-24 mt-10">
+    <div id="about" className="container lg:mt-24 mt-10">
+      {/* services header */}
       <ServicesHeader />
+      {/* courses */}
       <Courses />
     </div>
   )

@@ -1,38 +1,12 @@
 "use client"
-import { ReviewType } from "@/types";
 import ReviewCard from "./ReviewCard";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FadeUp } from "@/utils/animations";
 import { cn } from "@/utils/cn";
+import { reviews } from "@/utils/data";
 const Reviews = () => {
-    const reviews: ReviewType[] = [
-        {
-            name: "John Doe",
-            content: "Great course! The content was very informative and well-structured.",
-            rating: 5,
-        },
-        {
-            name: "Jane Smith",
-            content: "Excellent instructors and practical examples. Highly recommended!",
-            rating: 4.5,
-        },
-        {
-            name: "Alice Johnson",
-            content: "Good course, but some sections could be more detailed.",
-            rating: 4,
-        },
-        {
-            name: "Bob Brown",
-            content: "The course was okay, but the pace was a bit too fast for me.",
-            rating: 3.5,
-        },
-        {
-            name: "Charlie Davis",
-            content: "Not what I expected. The content felt outdated.",
-            rating: 2,
-        },
-    ];
+    
     const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
@@ -56,7 +30,7 @@ const Reviews = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                     className="text-blue-800 uppercase text-center text-3xl">testimonial</motion.h1>
+                    className="text-blue-800 uppercase text-center text-3xl">testimonial</motion.h1>
                 <div className="space-y-5 text-center flex flex-col items-center">
                     <motion.h1 variants={FadeUp(.2)}
                         initial="initial"
@@ -74,6 +48,7 @@ const Reviews = () => {
                     viewport={{ once: true }} className="reviews-container">
                     <div className={cn("transition-opacity duration-300",
                         fade ? 'opacity-100' : 'opacity-0')}>
+                        {/* review card */}
                         <ReviewCard review={reviews[currentReviewIndex]} />
                     </div>
                 </motion.div>

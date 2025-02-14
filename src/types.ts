@@ -32,3 +32,12 @@ export type ReviewType = {
   content: string;
   rating: number;
 };
+
+export type NavigationType= {
+  title: string;
+  links: string[];
+}
+export type SocialsType= {
+  link: string;
+  icon: JSX.Element;
+}

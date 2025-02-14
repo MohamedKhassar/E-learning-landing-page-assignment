@@ -13,7 +13,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             className="fixed container right-0 left-0 top-2 z-40 flex justify-center">
-            <div className="flex w-full items-center justify-between rounded-full border  bg-gradient-to-b from-white to-stone-900/0 px-7 py-3  mx-4 backdrop-blur-md">
+            <div className="flex w-full items-center justify-between rounded-full border  bg-gradient-white px-7 py-3  mx-4 backdrop-blur-md">
                 {/* Logo Section */}
                 <Link href="/#" className="flex items-center gap-2">
                     <Image
