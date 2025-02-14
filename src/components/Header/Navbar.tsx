@@ -23,7 +23,7 @@ const Navbar = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<Se
         return () => {
             document.removeEventListener("mousedown", handleClickOutside)
         }
-    }, [])
+    })
     return (
         <div ref={ref} className="relative md:justify-self-center">
             <button
