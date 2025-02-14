@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import hero from "/public/images/hero.png";
 import { FadeUp } from "@/utils/animations";
 import { motion } from "framer-motion";
+import Statistics from "./Header/statistics/Statistics";
 const Hero = () => {
     return (
         <div 
@@ -35,6 +36,7 @@ const Hero = () => {
                         src={hero.src} className="w-[500px]" alt="hero" loading="lazy" />
                 </motion.div>
             </section>
+            <Statistics /> 
         </div>
     );
 };
