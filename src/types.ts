@@ -1,4 +1,4 @@
-import {  StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { JSX } from "react";
 
 export type DataItem = {
@@ -14,15 +14,21 @@ export type ServicesType = {
   delay: number;
 };
 export type CoursesType = {
-    title:string
-    price:number
-    category:string
-    textColor:string
-    bgColor:string,
-    image:StaticImageData,
-    delay:number
+  title: string;
+  price: number;
+  category: string;
+  textColor: string;
+  bgColor: string;
+  image: StaticImageData;
+  delay: number;
 };
- export type AboutType = {
-    section: string;
-    description: string;
-  };
+export type AboutType = {
+  section: string;
+  description: string;
+};
+
+export type ReviewType = {
+  name: string;
+  content: string;
+  rating: number;
+};
