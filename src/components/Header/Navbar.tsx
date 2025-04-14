@@ -1,13 +1,13 @@
+"use client"
 import { cn } from '@/utils/cn'
 import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 
 const Navbar = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }) => {
     const [links, setLinks] = useState([
         { name: "Home", href: "/#home", selected: true },
         { name: "About", href: "/#about" },
-        { name: "Contact", href: "#contact" },
+        { name: "Contact", href: "/#contact" },
     ])
     const ref = useRef<HTMLDivElement>(null)
     const selectLink = (name: string) => {
@@ -43,19 +43,21 @@ const Navbar = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<Se
             >
                 {/* Navigation Links */}
                 {links.map((link, index) => (
-                    <Link
+                    <a
                         key={index}
-                        href={link.href}
-                        onClick={() => selectLink(link.name)}
-                        className={cn(
-                            "transition-colors duration-300 font-medium",
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById(link.href.replace("/#", ""))?.scrollIntoView({ behavior: "smooth" });
+                            selectLink(link.name);
+                        }} className={cn(
+                            "transition-colors duration-300 font-medium cursor-pointer",
                             link.selected
                                 ? "text-blue-600 font-bold"
                                 : "text-gray-600 hover:text-gray-800"
                         )}
                     >
                         {link.name}
-                    </Link>
+                    </a>
                 ))}
                 <button className="btn btn-primary !text-sm text-nowrap lg:!text-base">
                     subscribe
